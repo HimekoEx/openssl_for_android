@@ -29,7 +29,7 @@ then
     export ANDROID_NDK_ROOT=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-arm -static no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-arm --release -static no-autoalginit no-autoerrinit no-autoload-config no-err no-filenames no-shared no-stdio no-tests no-ui-console --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "arm64-v8a" ]
@@ -37,7 +37,7 @@ then
     export ANDROID_NDK_ROOT=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-arm64 -static no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-arm64 --release -static no-autoalginit no-autoerrinit no-autoload-config no-err no-filenames no-shared no-stdio no-tests no-ui-console --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "x86" ]
@@ -45,7 +45,7 @@ then
     export ANDROID_NDK_ROOT=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-x86 -static no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-x86 --release -static no-autoalginit no-autoerrinit no-autoload-config no-err no-filenames no-shared no-stdio no-tests no-ui-console --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "x86_64" ]
@@ -53,7 +53,7 @@ then
     export ANDROID_NDK_ROOT=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$ANDROID_NDK_ROOT/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-x86_64 -static no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-x86_64 --release -static no-autoalginit no-autoerrinit no-autoload-config no-err no-filenames no-shared no-stdio no-tests no-ui-console --prefix=${OUTPUT_PATH}
     build_library
 
 else
